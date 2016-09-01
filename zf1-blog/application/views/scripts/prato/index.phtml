@@ -1,0 +1,32 @@
+<h1>Pratos</h1>
+
+<?php $this->mensagem(); ?>
+
+<p>[<a href="<?php echo $this->url(array('action' => 'create')); ?>">Adicionar Novo</a>]</p>
+
+<table border="1">
+  <thead>
+    <tr>
+      <td>Id</td>
+      <td>Categoria</td>
+      <td>Prato</td>
+      <td>Preço</td>
+      <td>Ação</td>
+    </tr>
+  </thead>
+  <tbody>
+      <?php foreach ($this->pratos as $prato) { ?>
+        <tr>
+          <td><?php echo $prato['idprato']; ?></td>
+          <td><?php echo $prato['categoria']; ?></td>
+          <td><?php echo $prato['nomeprato']; ?></td>
+          <td><?php echo $prato['preco']; ?></td>
+          <td>
+            [<a href="<?php echo $this->url(array('action' => 'update', 'idprato' => $prato['idprato'])); ?>">editar</a>]
+             <?php if ($this->podeApagar) { ?>[<a href="<?php echo $this->url(array('action' => 'delete', 'idprato' => $prato['idprato'])); ?>">apagar</a>]<?php } ?>
+            <?php if ($this->podeAtualizarValor) { ?>[<a href="<?php echo $this->url(array('action' => 'update-valor', 'idprato' => $prato['idprato'])); ?>">editar preço</a>]<?php } ?>
+          </td>
+        </tr>
+    <?php } ?>
+  </tbody>
+</table>

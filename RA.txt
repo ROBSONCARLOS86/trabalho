@@ -1,0 +1,14 @@
+06004203 ROBSON CARLOS DIAS
+06000000 JUNIOR RAFAEL
+
+login = gerente@email.com
+senha = 123
+
+login = cozinheiroe@email.com
+senha = 123
+
+nome do banco trabalho
+
+login = root
+senha = vazia;
+

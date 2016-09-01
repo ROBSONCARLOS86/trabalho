@@ -1,0 +1,9 @@
+<h1>Cardápios</h1>
+
+<ul>
+    <?php foreach ($this->pratos as $prato) { ?>
+      <li>
+        <a href="<?php echo $this->url(array('action' => 'prato', 'idprato' => $prato['idprato'])); ?>"><?php echo $prato['categoria']; ?>/<?php echo $prato['nomeprato']; ?></a>
+      </li>
+  <?php } ?>
+</ul>
